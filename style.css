@@ -1,0 +1,220 @@
+/* CSS Reset dan Pengaturan Dasar */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #121212;
+    color: #E0E0E0;
+    line-height: 1.5;
+}
+
+/* Container Utama */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 15px;
+}
+
+/* Header */
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px 0;
+    margin-bottom: 25px;
+    border-bottom: 1px solid #333;
+}
+
+.header h1 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #FFFFFF;
+}
+
+.header .icon {
+    font-size: 1.6rem;
+    margin-left: 10px;
+    color: #00AFFF;
+}
+
+/* Grid Produk */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+
+/* Kartu Produk */
+.product-card {
+    background-color: #1E1E1E;
+    border-radius: 8px;
+    overflow: hidden;
+    text-decoration: none;
+    color: #E0E0E0;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #282828;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 12px rgba(0, 175, 255, 0.1);
+}
+
+.product-card img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 4/5;
+    object-fit: cover;
+    background-color: #333;
+    display: block;
+}
+
+.product-card-info {
+    padding: 12px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.product-card-info h3 {
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-bottom: 5px;
+    color: #FFFFFF;
+}
+
+.product-card-info .price {
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: #00AFFF;
+}
+
+/* === Gaya untuk Slider Testimoni === */
+.testimonials-section {
+    padding: 40px 0;
+    text-align: center;
+    margin-top: 40px;
+    border-top: 1px solid #333;
+}
+
+.testimonials-section h2 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.testimonial-slider {
+    position: relative;
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #1E1E1E;
+    border: 1px solid #282828;
+    border-radius: 8px;
+    padding: 30px 50px; /* Ruang untuk tombol */
+    overflow: hidden;
+}
+
+.testimonial-wrapper {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.testimonial {
+    min-width: 100%;
+    box-sizing: border-box;
+}
+
+.testimonial p {
+    font-style: italic;
+    margin-bottom: 15px;
+    color: #ccc;
+    font-size: 0.9rem;
+}
+
+.testimonial-author {
+    font-weight: bold;
+    color: #fff;
+    font-size: 1rem;
+}
+
+.slider-controls {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.slider-controls button {
+    background: #333;
+    color: #E0E0E0;
+    border: none;
+    padding: 10px 20px;
+    margin: 0 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.slider-controls button:hover {
+    background-color: #00AFFF;
+    color: #121212;
+}
+
+
+/* Footer */
+.footer {
+    text-align: center;
+    padding: 30px 15px;
+    margin-top: 40px;
+    border-top: 1px solid #333;
+}
+
+.social-icons {
+    margin-bottom: 20px;
+}
+
+.social-icons a {
+    color: #888;
+    font-size: 1.6rem;
+    margin: 0 10px;
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #00AFFF;
+}
+
+.copyright {
+     color: #666;
+     font-size: 0.8rem;
+}
+
+/* Media Queries untuk Layar Lebih Besar */
+@media (min-width: 768px) {
+    .product-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+    }
+    .container {
+        padding: 20px;
+    }
+     .product-card-info h3 {
+        font-size: 1rem;
+    }
+     .product-card-info .price {
+        font-size: 0.95rem;
+    }
+    .testimonials-section h2 {
+        font-size: 1.8rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    .product-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
